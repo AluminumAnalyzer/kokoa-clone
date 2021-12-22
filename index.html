@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="kr">
+  <head>
+    <style>
+      :root{
+        --main-color: #fcce00;
+      }
+      body {
+        height: 1000vh;
+        margin: 50px;
+      }
+
+      span {
+        background-color: yellowgreen;
+        padding: 5px;
+        border-radius: 10px;
+      }
+      
+      input::placeholder{
+        color:yellowgreen
+      }
+
+      p{
+        background-color: var(--main-color);
+      }
+
+      p::selection{
+        color:white;
+        background-color: yellowgreen;
+      }
+
+      p::first-letter{
+        font-size: 20px;
+      }
+
+      a{
+        color: var(--main-color);
+      }
+
+
+    </style>
+  <body>
+    <div>
+      <a href="https://apple.com">Apple</a>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum quas quibusdam perspiciatis voluptates corporis numquam, excepturi laudantium dolorum non magnam fugit maiores odit, officiis, necessitatibus placeat hic at unde in?</p>
+      <form>
+        <input type="text" placeholder="Name" />
+      
+      </form>
+    </div>
+  </body>
+</html>

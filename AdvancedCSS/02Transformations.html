@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="kr">
+  <!--transform으로 요소를 변형 가능
+  스타일시트에서는 transform을 사용하여 요소를 변형할 수 있다.
+  transform: 후에 변형하고자 하는 함수를 기술하는 형식으로 변형한다
+  다만 이는 실제로는 이미지를 변형하는 것이 아니라 이미지의 좌표를 변형하는 것이다.
+  그러므로 브라우저는 원래 이미지를 변형하기전의 공간을 기억하고 그 위치를 비워두는 현상이
+  발생한다. -->
+  <head>
+    <title>Advanced CSS</title>
+    <style>
+      :root {
+        --a-firstcolor: wheat;
+        --a-secondcolor: tomato;
+      }
+
+      img {
+        border: 5px solid black;
+        border-radius: 50%;
+        /* 아래를 주석처리 전 후를 비교하면 이해가 쉽습니다.*/
+        transform: rotateX(30deg) rotateY(20deg) rotateZ(20deg);
+
+        transition: transform 1s ease-in-out;
+      }
+
+      img:hover {
+        transform: rotateZ(90deg);
+      }
+    </style>
+  </head>
+  <body>
+    <img src="../logo.png" alt="logo" width="100px" height="100px" />
+    <span>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate,
+      sapiente omnis vitae adipisci aperiam quam non voluptate ipsam vel sint
+      placeat. Natus fugit, ab quia nisi repellendus quae nihil dolor?
+    </span>
+  </body>
+</html>

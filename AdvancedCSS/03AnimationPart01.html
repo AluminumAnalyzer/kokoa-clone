@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="kr">
+  <head>
+    <!-- transform은 모양을 변형을 가하는 것이고
+    transition은 state간의 변형을 시간과 변형함수를 통해 부드럽게 변경하는 것이다.
+    따라서 이것은 특정 조건에 따라 반응하는 방식이며 사용자의 개입없이 하는 경우
+    Animation이 필요하다. -->
+    <title>Advanced CSS</title>
+    <style>
+      :root {
+        --a-firstcolor: wheat;
+        --a-secondcolor: tomato;
+      }
+
+      /* keyframes으로 시작(from)에서 종료(to)로 변형하는 것을 기술한뒤 
+      스타일에서 animation: 뒤에 내용을 기술합니다. */
+      @keyframes superSexyCoinFlip {
+        from {
+          transform: rotateY(0deg);
+        }
+        to {
+          transform: rotateY(360deg);
+        }
+      }
+
+      img {
+        border: 5px solid black;
+        border-radius: 50%;
+        /* animation : 
+        (선언된 에니메이션 이름) (시간) (변형함수또는 기본값) (옵션으로 무한반복) 
+        이러한 방식으로 에니메이션을 설정합니다. */
+        animation: superSexyCoinFlip 5s ease-in-out infinite;
+      }
+    </style>
+  </head>
+  <body>
+    <img src="../logo.png" alt="logo" width="100px" height="100px" />
+    <span>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate,
+      sapiente omnis vitae adipisci aperiam quam non voluptate ipsam vel sint
+      placeat. Natus fugit, ab quia nisi repellendus quae nihil dolor?
+    </span>
+  </body>
+</html>

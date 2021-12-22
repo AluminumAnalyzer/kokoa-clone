@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="kr">
+  <!-- Transition에 관한 CSS를 살펴보자. -->
+  <!-- a 태그에 hover state로 변경될 경우의 Transition을 적용하려면
+    transition-property와 transition-duration을 적용해야 한다.
+    단 이 경우 a 태그의 속성을 직접 적용해야 하며 a hover에 적용하는 것이 아님   -->
+  <head>
+    <title>Advanced CSS</title>
+    <style>
+      :root {
+        --a-firstcolor: wheat;
+        --a-secondcolor: tomato;
+      }
+
+      a {
+        color: var(--a-firstcolor);
+        background-color: var(--a-secondcolor);
+        text-decoration: none;
+        padding: 3px 5px;
+        border-radius: 5px;
+        font-size: 55px;
+        transition: background-color 1s ease-in-out, color 1s ease-in-out;
+        /* 특정 요소뿐만 아니라 모든 변경 속성에 변경을 가하려면
+        transition: all 3s ease-in-out;
+        이런 방식으로 all을 사용하면 됨 
+        https://developer.mozilla.org/en-US/docs/Web/CSS/transition-timing-function/ 상세 정보
+        ease-in-out은 transition-timing-function으로 나중에 학습예정*/
+      }
+      a:hover {
+        border-radius: 10px;
+        color: var(--a-secondcolor);
+        background-color: var(--a-firstcolor);
+      }
+    </style>
+  </head>
+  <body>
+    <a href="#">Go Home</a>
+  </body>
+</html>

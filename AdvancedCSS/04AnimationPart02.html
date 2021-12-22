@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="kr">
+  <head>
+    <!-- transform은 모양을 변형을 가하는 것이고
+    transition은 state간의 변형을 시간과 변형함수를 통해 부드럽게 변경하는 것이다.
+    따라서 이것은 특정 조건에 따라 반응하는 방식이며 사용자의 개입없이 하는 경우
+    Animation이 필요하다. -->
+    <title>CSS 05. Animation Part 02</title>
+    <style>
+      :root {
+        --a-firstcolor: wheat;
+        --a-secondcolor: tomato;
+      }
+
+      body {
+        display: flex;
+        height: 100vh;
+        align-items: center;
+        justify-content: center;
+      }
+
+      /* keyframes의 다른 방식으로 %로 전체 변형의 내용 진행 퍼센트에 원하는 형태의 변형을 서술하는 방법이 있습니다.
+      다름 방법에서는 이러한 방법을 보여줍니다. */
+      @keyframes superSexyCoinFlip {
+        0% {
+          transform: rotateY(0deg);
+        }
+        50% {
+          transform: rotateY(180deg) translateX(100px);
+        }
+        100% {
+          transform: rotateY(0deg);
+        }
+      }
+
+      img {
+        border: 5px solid black;
+        border-radius: 50%;
+        /* animation : 
+        (선언된 에니메이션 이름) (시간) (변형함수또는 기본값) (옵션으로 무한반복) 
+        이러한 방식으로 에니메이션을 설정합니다. */
+        animation: superSexyCoinFlip 5s ease-in-out infinite;
+      }
+    </style>
+  </head>
+  <body>
+    <img src="../logo.png" alt="logo" width="100px" height="100px" />
+  </body>
+</html>
