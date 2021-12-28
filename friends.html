@@ -19,24 +19,34 @@
         <span>18:43</span>
       </div>
       <div class="status-bar__column">
-        <span>110%</span>
+        <span>100%</span>
         <i class="fas fa-battery-full fa-lg"></i>
         <i class="fas fa-bolt"></i>
       </div>
     </div>
-    <header class="welcome-header">
-      <h1 class="welcome-header__title">Welcome to KokoaTalk</h1>
-      <p class="welcome-header__text">
-        If you have kokoatalk account log in with your email or phone number.
-      </p>
-    </header>
-    <form id="login-form" action="friends.html" method="get">
-      <input name="username" type="text" placeholder="Email or Phone Number" />
-      <input name="password" type="password" placeholder="Password" />
-      <input type="submit" value="Log In" />
-      <!-- <input type="button" value="Sign Up" /> -->
-      <a href="#">Find KokoaTalk Account or Password</a>
-    </form>
+    <nav class="nav">
+      <ul class="nav__list">
+        <li class="nav__btn">
+          <a href="#" class="nav__link"><i class="fas fa-users fa-2x"></i></a>
+        </li>
+        <li class="nav__btn">
+          <a href="#" class="nav__link">
+            <span class="nav__notification">1</span>
+            <i class="fas fa-comments fa-2x"></i>
+          </a>
+        </li>
+        <li class="nav__btn">
+          <a href="#" class="nav__link"><i class="fas fa-search fa-2x"></i></a>
+        </li>
+        <li class="nav__btn">
+          <a href="#" class="nav__link">
+            <span class="nav__notification2"></span>
+            <i class="fas fa-ellipsis-h fa-2x"></i>
+          </a>
+        </li>
+      </ul>
+    </nav>
+
     <script
       src="https://kit.fontawesome.com/c759fd455d.js"
       crossorigin="anonymous"
